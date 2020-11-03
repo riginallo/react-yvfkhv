@@ -18,6 +18,11 @@ export default function App() {
  src:'https://cdn.pixabay.com/photo/2017/09/12/17/32/horse-2743013__340.jpg',
 
   title:'Mustang',
+    },
+     {
+ src:'https://media1.tenor.com/images/19462afefe735b54035461a5f98e455a/tenor.gif?itemid=3427502',
+
+  title:'Legend..',
     }
   ]
  
@@ -53,7 +58,7 @@ export default function App() {
       <p id='ttl' style={{ marginLeft:130,
     borderColor:'black'}}>{dt[i].title}</p>
       <>
-      <button style={{ padding:5,borderColor:'black',borderWidth:1,width:100}} onClick={next}>next</button>
+      <button style={{ marginLeft:100,padding:5,borderColor:'black',borderWidth:1,width:100}} onClick={next}>next</button>
       <button style={{ padding:5,marginLeft:20,borderColor:'black',borderWidth:1,
     width:100, }} onClick={Previous}>Previous</button>
       </>
