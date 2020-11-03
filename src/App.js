@@ -13,14 +13,25 @@ export default function App() {
  src:'https://cdn.pixabay.com/photo/2016/07/04/19/49/cowgirl-1497258__340.jpg',
 
   title:'Cowgirl',
+    },
+      {
+ src:'https://cdn.pixabay.com/photo/2017/09/12/17/32/horse-2743013__340.jpg',
+
+  title:'Mustang',
     }
   ]
  
  let next=()=>{
    if(i < dt.length-1){
  i+=1;
-   }else{
-     i-=1;
+   }
+ ttl.innerHTML=dt[i].title;
+ img1.src=dt[i].src;
+ }
+
+ let Previous=()=>{
+   if(i > 0){
+ i-=1;
    }
  ttl.innerHTML=dt[i].title;
  img1.src=dt[i].src;
@@ -28,14 +39,24 @@ export default function App() {
   
   return (
     <div>
-    <div style={{backgroundColor:'lightGrey'}}>
-      <h1>Western wworld!</h1>
+    <div style={{backgroundColor:'lightblue',width:350,height:50,marginBottom:10}}>
+      <h1>Western world!</h1>
       
     </div>
-    <div style={{backgroundColor:'lightGrey',width:50,height:350}}>
+    <div style={{
+    flex: 1,
+    marginLeft:10,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',}}>
       <img id='img1' style={{width:350,height:350}} src={dt[i].src} />
-      <p id='ttl' style={{marginLeft:150}}>{dt[i].title}</p>
-      <button style={{marginLeft:150}} onClick={next}>next</button>
+      <p id='ttl' style={{ marginLeft:130,
+    borderColor:'black'}}>{dt[i].title}</p>
+      <>
+      <button style={{ padding:5,borderColor:'black',borderWidth:1,width:100}} onClick={next}>next</button>
+      <button style={{ padding:5,marginLeft:20,borderColor:'black',borderWidth:1,
+    width:100, }} onClick={Previous}>Previous</button>
+      </>
     </div>
     </div>
   );
